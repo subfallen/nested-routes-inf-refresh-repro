@@ -1,4 +1,5 @@
 import Wrapper from "./react/Wrapper";
+import Link from "next/link";
 
 type Props = {
     one: React.ReactNode;
@@ -16,9 +17,20 @@ export default function RootLayout({one, two}: Props) {
         <Wrapper>
             {one && two ?
                 (<div> {one} {two} </div>)
-                : (<a href={"/a/1"}>Go to reproduction</a>)}
+                : linkToReproduction()}
         </Wrapper>
         </body>
         </html>
     )
+}
+
+function linkToReproduction() {
+    return (
+        <a href={"/a/1"}>Go to reproduction</a>
+    )
+
+    // Does NOT reproduce using Link
+    // return (
+    //     <Link href={"/a/1"}>Go to reproduction</Link>
+    // )
 }
