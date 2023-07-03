@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) template to use when reporting a [bug in the Next.js repository](https://github.com/vercel/next.js/issues) with the `app/` directory.
+## Steps to reproduce
+
+1. `npm run dev`
+2. Open http://localhost:3000
+3. Check the browser console to verify a fixed number of "`Wrapper rendered`" logs.
+4. Now click on the link to go to the _/a/1_ route.
+5. Watch the browser console begin an infinite loop of "`Wrapper rendered`" logs.
 
 ## Getting Started
 
